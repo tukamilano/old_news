@@ -1,5 +1,4 @@
-document.getElementById("get-news").addEventListener("click", function() {
-    var url = "https://news.yahoo.co.jp/";
+function getNews(url) {
     var now = new Date();
     var tenYearsAgo = new Date(now.getFullYear() - 10, now.getMonth(), now.getDate());
 
@@ -33,4 +32,16 @@ document.getElementById("get-news").addEventListener("click", function() {
             console.error("エラーが発生しました:", error);
             alert("データの取得中にエラーが発生しました。");
         });
+}
+
+document.getElementById("get-yahoo-news").addEventListener("click", function() {
+    getNews("https://news.yahoo.co.jp/");
+});
+
+document.getElementById("get-bbc-news").addEventListener("click", function() {
+    getNews("https://www.bbc.com/");
+});
+
+document.getElementById("get-cnn-news").addEventListener("click", function() {
+    getNews("https://edition.cnn.com/");
 });
