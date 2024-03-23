@@ -3,12 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>10年前のニュース</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .news-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .news-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        #news-container {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-    <button id="get-yahoo-news">10年前のYahooニュースを表示</button>
-    <button id="get-bbc-news">10年前のBBCニュースを表示</button>
-    <button id="get-cnn-news">10年前のCNNニュースを表示</button>
-    <div id="news-container"></div>
+    <div class="container">
+        <h1>10年前のニュースを見よう！</h1>
+        <div class="button-container">
+            <button class="news-button" id="get-yahoo-news">Yahooニュース</button>
+            <button class="news-button" id="get-bbc-news">BBCニュース</button>
+            <button class="news-button" id="get-cnn-news">CNNニュース</button>
+        </div>
+        <div id="news-container"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
